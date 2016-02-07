@@ -1,5 +1,5 @@
 class Screen:
-	typeWrite
+	#typeWrite = ""
 	strings = []
 	index = 0
 	clear_space = "                "
@@ -22,9 +22,9 @@ class Screen:
 			self.index -= 1
 		return
 
-	def write(self, string):
-		self.typeWrite = string
-		
+	#def write(self, string):
+	#	self.typeWrite = string
+
 
 	def removeString(self, index):
 		del self.strings[index]
