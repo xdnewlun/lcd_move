@@ -27,7 +27,7 @@ lcd = LCD(22,21,17,23,25,24)
 #lcd.set_cursor(0,2) # line,column
 #lcd.send_string('Xander Newlun')
 
-screen = Screen(['Xander', 'is', 'gai', 'and', 'so', 'is', 'deacon'], lcd)
+screen = Screen(['hi', 'hello', 'test', 'pizza'], lcd)
 screen.display();
 
 is_press = [False, False]
