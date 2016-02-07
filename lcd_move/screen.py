@@ -15,10 +15,12 @@ class Screen:
 		return
 
 	def moveUp(self):
-		if(self.index-1 < 0):
+		if self.index-1 < 0:
+			print('looped back')
 			self.index = len(self.strings)
 		else:
-			self.index-=1
+			print('went down')
+			self.index -= 1
 		return
 
 	def removeString(self, index):
