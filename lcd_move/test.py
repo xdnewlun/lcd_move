@@ -43,14 +43,7 @@ while run:
 	elif gpio.input(5) == True:
 		is_press = False
 	elif gpio.input(12) == False:
-		if is_press == False:
-			screen.moveUp()
-			screen.display()
-			is_press = True
-		else:
-			print('STOP')
-	elif gpio.input(12) == True:
-		is_press = False
+		print("Button")
 
 while run:
     sleep(1)
