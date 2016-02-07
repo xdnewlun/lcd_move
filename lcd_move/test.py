@@ -49,7 +49,7 @@ while run:
 			is_press = True
 		else:
 			print('STOP')
-	elif gpio.input(6) == True:
+	elif gpio.input(12) == True:
 		is_press = False
 
 while run:
