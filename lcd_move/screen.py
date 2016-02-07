@@ -15,7 +15,7 @@ class Screen:
 		return
 
 	def moveUp(self):
-		if(self.index-1 <= 0):
+		if(self.index-1 < 0):
 			self.index = len(self.strings)
 		else:
 			self.index-=1
