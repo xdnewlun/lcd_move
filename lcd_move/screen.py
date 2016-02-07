@@ -21,6 +21,7 @@ class Screen:
 		else:
 			print('went down')
 			self.index -= 1
+		console.log(self.index)
 		return
 
 	def removeString(self, index):
