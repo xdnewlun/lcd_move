@@ -30,20 +30,24 @@ lcd = LCD(22,21,17,23,25,24)
 screen = Screen(['Dog', 'Cat', 'Moose', 'Potatoes'], lcd)
 screen.display();
 
-is_press = False
+is_press = [False, False]
 
 while run:
-	if gpio.input(5) == False:
-		if is_press == False:
+	if not gpio.input(5):
+		if not is_press[0]:
 			screen.moveDown()
 			screen.display()
-			is_press = True
-		else:
-			print('STOP')
-	elif gpio.input(5) == True:
-		is_press = False
-	elif gpio.input(12) == False:
-		print("Button")
+		is_press[0] = True
+	elif gpio.input(5):
+		is_press[0] = False
+
+	if not gpio.input(12):
+		if not is_press[1]:
+			screen.moveUp()
+			screen.display()
+		is_press[1] = True
+	elif gpio.input(12):
+		is_press[1] = False
 
 while run:
     sleep(1)
