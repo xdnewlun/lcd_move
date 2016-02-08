@@ -34,6 +34,7 @@ class Screen:
 				self.lcd.set_cursor(0, 0)
 
 			for i in range(0, 16):
+				self.clear()
 				self.lcd.send_string(self.strings[msg_i][:i])
 				sleep(1)
 
