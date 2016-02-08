@@ -24,7 +24,7 @@ class Screen:
 
 	def write(self, messages):
 		self.strings = split_len(messages, 16)
-		for msg_i in rang(0, len(messages)):
+		for msg_i in range(0, len(messages)):
 			if msg_i > 0 and msg_i-1 % 2 == 0:
 				self.moveDown()
 			if msg_i % 2 == 0:
