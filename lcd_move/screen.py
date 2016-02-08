@@ -7,6 +7,7 @@ class Screen:
 	def __init__(self, strings, lcd):
 		self.strings = strings
 		self.lcd = lcd
+		self.clear()
 
 	def moveDown(self):
 		if(self.index+1 >= len(self.strings)):
