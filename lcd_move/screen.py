@@ -1,5 +1,5 @@
+from time import sleep
 class Screen:
-	#typeWrite = ""
 	strings = []
 	index = 0
 	clear_space = "                "
@@ -22,8 +22,19 @@ class Screen:
 			self.index -= 1
 		return
 
-	#def write(self, string):
-	#	self.typeWrite = string
+	def write(self, messages):
+		self.strings = split_len(messages, 16)
+		for msg_i in rang(0, len(messages)):
+			if msg_i > 0 and msg_i-1 % 2 == 0:
+				# We have to move down a line
+
+			if msg_i % 2 == 0:
+				self.lcd.set_cursor(1, 0)
+			else:
+				self.lcd.set_cursor(0, 0)
+
+			for i in range(0, 16):
+				self.lcd.send_string(self.strings[:i])
 
 
 	def removeString(self, index):
@@ -56,3 +67,6 @@ class Screen:
 
 		self.lcd.send_string(self.strings[second])
 		return
+
+def split_len(seq, length):
+	return [seq[i:i+length] for i in rang(0, len(seq), length)]
