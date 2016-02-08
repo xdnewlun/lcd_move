@@ -26,8 +26,7 @@ class Screen:
 		self.strings = split_len(messages, 16)
 		for msg_i in rang(0, len(messages)):
 			if msg_i > 0 and msg_i-1 % 2 == 0:
-				# We have to move down a line
-
+				self.moveDown()
 			if msg_i % 2 == 0:
 				self.lcd.set_cursor(1, 0)
 			else:
@@ -35,6 +34,7 @@ class Screen:
 
 			for i in range(0, 16):
 				self.lcd.send_string(self.strings[:i])
+				sleep(.15)
 
 
 	def removeString(self, index):
