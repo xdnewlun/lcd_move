@@ -34,7 +34,7 @@ class Screen:
 
 			for i in range(0, 16):
 				self.lcd.send_string(self.strings[msg_i][:i])
-				sleep(.15)
+				sleep(1)
 
 
 	def removeString(self, index):
