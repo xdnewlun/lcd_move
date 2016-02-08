@@ -28,7 +28,7 @@ lcd = LCD(22,21,17,23,25,24)
 #lcd.send_string('Xander Newlun')
 
 screen = Screen([''], lcd)
-screen.write('A little differently. Basically, any object with an iterablemethod can be used in a for loop in Python. Even strings, despite not having an iterable method - but we'll not get on to that here. Having an iterable method basically means that the data can be presented in list form, where there's multipl')
+screen.write('A little differently. Basically, any object with an iterablemethod can be used in a for loop in Python. Even strings, despite not having an iterable method - but well not get on to that here. Having an iterable method basically means that the data can be presented in list form, where theres multipl')
 
 is_press = [False, False]
 
